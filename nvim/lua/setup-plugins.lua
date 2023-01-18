@@ -5,6 +5,8 @@ vim.cmd([[
   augroup end
 ]])
 
+vim.cmd[[colorscheme nord]]
+
 local status, packer = pcall(require, "packer")
 if not status then
     return
@@ -72,13 +74,14 @@ return require('packer').startup(function(use)
   use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
   -- treesitter configuration
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    run = function()
-      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-      ts_update()
-    end,
-  })
+  -- use({
+  --   "nvim-treesitter/nvim-treesitter",
+  --   run = function()
+  --     local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+  --     ts_update()
+  --   end,
+  -- })
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...

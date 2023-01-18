@@ -3,10 +3,12 @@ if not status then
     return
 end
 
-local lualine_nord = require("lualine.themes.nord")
+-- local lualine_nord = require("lualine.themes.nord")
 
 lualine.setup({
     options = {
-        theme = lualine_nord
+        -- theme = lualine_nord
+        theme = 'auto',
+        icons_enabled = true,
     }
 })
