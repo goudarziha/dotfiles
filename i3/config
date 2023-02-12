@@ -39,8 +39,8 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # gaps
-gaps inner 30
-gaps outer 30
+gaps inner 15
+gaps outer 15
 
 smart_borders on
 smart_borders no_gaps
@@ -180,6 +180,6 @@ bindsym $mod+r mode "resize"
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
-exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
+exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf --experimental-backends -b
 exec_always --no-startup-id nitrogen --restore
 

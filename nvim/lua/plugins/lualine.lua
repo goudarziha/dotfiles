@@ -1,14 +1,15 @@
-local status, lualine = pcall(require "lualine")
+-- import lualine plugin safely
+local status, lualine = pcall(require, "lualine")
 if not status then
-    return
+  return
 end
 
--- local lualine_nord = require("lualine.themes.nord")
+-- get lualine nightfly theme
+local nord = require("lualine.themes.nord")
 
+-- configure lualine with modified theme
 lualine.setup({
-    options = {
-        -- theme = lualine_nord
-        theme = 'auto',
-        icons_enabled = true,
-    }
+  options = {
+    theme = nord,
+  },
 })

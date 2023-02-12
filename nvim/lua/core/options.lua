@@ -23,7 +23,6 @@ opt.cursorline      = true
 -- appearance
 opt.termguicolors   = true
 opt.background      = "dark"
-opt.signcolumn      = "yes"
 
 -- backspace
 opt.backspace       = "indent,eol,start"
@@ -36,4 +35,4 @@ opt.splitbelow      = true
 
 opt.iskeyword:append("-")
 
--- turn off swap
+opt.swapfile        = false
